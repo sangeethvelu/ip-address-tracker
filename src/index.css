@@ -1,0 +1,157 @@
+/********** CSS RESETS **********/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: hsl(0, 0%, 17%);
+  line-height: 1.2;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* ********* UTILITY CONTAINER ********* */
+
+.main-container {
+  background-image: url(../images/pattern-bg.png);
+  height: 100vh;
+}
+
+.container {
+  width: min(120rem, 85%);
+  margin: 0 auto;
+}
+
+/* ********* SEARCH CONTAINER ********* */
+
+.header-container {
+  margin-bottom: 5.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3.2rem;
+}
+
+.header-title {
+  font-size: 2.8rem;
+  color: #ffffff;
+  margin-top: 3.2rem;
+}
+
+.search-box {
+  width: min(50rem, 80%);
+  display: flex;
+  align-items: center;
+}
+
+.input-search {
+  border: none;
+  border-top-left-radius: 1.2rem;
+  border-bottom-left-radius: 1.2rem;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+.btn-search {
+  display: flex;
+  align-self: center;
+  background-color: black;
+  border: none;
+  padding: 1rem 1rem;
+  border-top-right-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+}
+
+.btn-search:hover,
+.btn-search:active {
+  background-color: #423939;
+}
+
+.search-icon {
+  width: 2.4rem;
+}
+
+/********** RESULT CONTAINER **********/
+
+.result-container {
+  padding: 3.2rem 3.2rem;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 2.4rem;
+}
+
+.card-section {
+  background-image: linear-gradient(
+    to left bottom,
+    #d5f99c,
+    #b9f68f,
+    #98f286,
+    #6def81,
+    #12eb81
+  );
+  padding: 3.2rem;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2.4rem;
+}
+
+.card-header {
+  font-size: 2rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.8rem;
+}
+
+.card-details {
+  font-size: 1.8rem;
+}
+
+.card-subheader {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.card-description {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+@media (max-width: 50rem) {
+  .result-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/********** MAPS CONTAINER **********/
+
+.leaflet-container {
+  height: 40rem;
+  border-radius: 0.8rem;
+}
